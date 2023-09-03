@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> detail </title>
+
+    <link rel="stylesheet" href="./css/set.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/index_category.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/detail.css">
+
+</head>
+
+
+<body>
+<header>
+    <div class="logo">
+        <div id="logo" onclick="location.href='./'"></div>
+        <img src="./img/Logo.png" style="height: 200%;">
+    </div>
+
+    <div class="trbox">
+        <a class="text" id="open-modal"> Login </a>
+        <div id="modal">
+            <form action="/member/login" method="post" class="modal-content">
+
+                <div class="logintext">Login</div>
+
+                <span id="close-modal">X</span>
+
+                <div class="login-box">
+                    <span class="text">ID</span>
+                    <input class="input" type="text" name="memberEmail">
+                </div>
+                <div class="login-box">
+                    <span class="text">Password</span>
+                    <input class="input" type="password" name="memberPassword">
+                </div>
+
+                <input class="login-click" type="submit" value="로그인">
+
+                <div class="help">
+                    <a href="./member/join">회원가입</a>
+                    <a href="#">아이디 찾기</a>
+                    <a href="#">비밀번호 찾기</a>
+                </div>
+
+                <div class="logintext">SNS 로그인</div>
+
+                <div class="sns-login">
+                    <img class="icon" onclick="location.href='#'" src="./img/sns-icon/login-naver.png">
+                    <img class="icon" onclick="location.href='#'" src="./img/sns-icon/login-google.png">
+                    <img class="icon" onclick="location.href='#'" src="./img/sns-icon/login-kakaotalk.png">
+                    <img class="icon" onclick="location.href='#'" src="./img/sns-icon/login-facebook.png">
+                </div>
+
+            </form>
+        </div>
+        <a href="./member/join" class="text"> Join </a>
+        <a href="#" class="text"> MyPage </a>
+        <a href="#" class="text"> Order </a>
+        <a href="./secure/cart" class="text"> Cart </a>
+    </div>
+
+    <div class="searchbox">
+        <input class="search" type="text" name="search">
+        <img id="img" onclick="location.href='#'" src="./img/lens.jpg" style="width: 25px; height: 25px;">
+    </div>
+
+</header>
+
+<nav>
+    <ul class="menu">
+        <li> <a href="#" class="text"> Best </a>
+        </li>
+        <li> <a href="#" class="text"> Sale </a>
+        </li>
+        <li> <a href="#" class="text"> New </a>
+        </li>
+        <li> <a href="#" class="text"> Top </a>
+            <ul class="submenu">
+                <li> <a href="#"> 맨투맨 & 후드티 </a> </li>
+                <li> <a href="#"> 셔츠 & 남방 </a> </li>
+                <li> <a href="#"> 니트 </a> </li>
+                <li> <a href="./products"> 반팔티 </a> </li>
+                <li> <a href="#"> 긴팔티 </a> </li>
+            </ul>
+        </li>
+        <li> <a href="#" class="text"> Pants </a>
+            <ul class="submenu">
+                <li> <a href="#"> 슬랙스 </a> </li>
+                <li> <a href="#"> 청바지 </a> </li>
+                <li> <a href="#"> 반바지 </a> </li>
+                <li> <a href="#"> 밴딩팬츠 </a> </li>
+            </ul>
+        </li>
+        <li> <a href="#" class="text"> Outer </a>
+            <ul class="submenu">
+                <li> <a href="#"> 패딩 </a> </li>
+                <li> <a href="#"> 코트 </a> </li>
+                <li> <a href="#"> 자켓 </a> </li>
+                <li> <a href="#"> 수트 & 블레이져 </a> </li>
+                <li> <a href="#"> 가디건 </a> </li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+<main>
+    <div class="pagebox">
+        <div class="prdtimg">
+            <img src="./p_img/t-shirt_img/w_ns.png">
+        </div>
+
+        <section>
+            <div class="prdtname">
+                "상품명"
+            </div>
+            <div class="infobox">
+                <div class="smlbox">
+                        <span>
+                            판매가격
+                        </span>
+                    <span class="inputbox">
+                            31,900원
+                        </span>
+                </div>
+                <div class="smlbox">
+                        <span>
+                            색상
+                        </span>
+                    <span class="inputbox">
+                            <select class="input">
+                                <option> 옵션 선택 </option>
+                                <option> 블랙 </option>
+                                <option> 화이트 </option>
+                            </select>
+                        </span>
+                </div>
+                <div class="smlbox">
+                        <span>
+                            사이즈
+                        </span>
+                    <span class="inputbox">
+                            <select class="input">
+                                <option> 옵션 선택 </option>
+                                <option> 90(S) </option>
+                                <option> 95(M) </option>
+                                <option> 100(L) </option>
+                                <option> 105(XL) </option>
+                            </select>
+                        </span>
+                </div>
+                <div class="smlbox">
+                        <span>
+                            수량
+                        </span>
+                    <span class="inputbox">
+
+                        </span>
+                </div>
+
+                <br> <br>
+                <div class="line"> </div>
+
+                <div class="smlbox">
+                        <span style="font-weight: bolder;">
+                            총 상품 금액
+                        </span>
+                    <span class="inputbox">
+
+                        </span>
+                </div>
+            </div>
+            <div class="btnbox">
+                <div class="buybox">
+                    구매하기
+                </div>
+                <div class="cartbox">
+                    장바구니
+                </div>
+            </div>
+        </section>
+
+    </div>
+</main>
+
+<footer>
+    <article class="address">
+        <ul class="menu listn">
+            <h3> CS CENTER </h3>
+            <li> 카카오톡/네이버톡톡 </li>
+            <li> MON-FRI : 10:00 ~ 17:00 </li>
+            <li> LUNCH: 13:00 ~ 14:00 </li>
+            <li> SAT, SUN, HOLIDAY OFF </li>
+            <li> 대표번호 1111-1111 (유선상담불가) </li>
+        </ul>
+        <ul class="menu listn">
+            <h3> DELIVERY </h3>
+            <li> 반품주소: </li>
+            <li> 경기도 고양시 덕양구 삼원로 111 물류센터 </li>
+            <li> 대한통운 택배 이용 </li>
+        </ul>
+        <ul class="menu listn">
+            <h3> BANK ACCOUNT </h3>
+            <li> 국민 1111-111-111111 </li>
+            <li> 신한 1111-111-111111 </li>
+            <li> 우리 1111-111-111111 </li>
+            <li> 기업 1111-111-111111 </li>
+            <li> 농협 1111-111-111111 </li>
+        </ul>
+        <ul class="menu listn">
+            <h3> MENU </h3>
+            <li> 홈 </li>
+            <li> 이용약관 </li>
+            <li> 개인정보처리방침 </li>
+            <li> 쇼핑몰 이용안내 </li>
+            <li> <a class="nodeco" href="./map"> 찾아오시는 길 </a> </li>
+        </ul>
+    </article>
+
+    <ul class="copyright listn">
+        <li> ㈜ SIMPLEBUTSLAY | 대표 : 김정우 | 사업자 등록 번호 : 111-11-11111 | 통신판매업 신고: 제2023-경기고양-111호 | 개인정보 보호 책임자 : 김정우
+            [사업자정보확인]
+        </li>
+        <li> E-mail : rara980928@google.com | 주소 : 경기도 고양시 덕양구 원흥동 111-1 1층 SIMPLEBUTSLAY 도로명 : 경기도 고양시 삼원로 111 1층
+            SIMPLEBUTSLAY </li>
+        <li> ⓒ 2023. SIMPLEBUTSLAY All rights reserved. </li>
+    </ul>
+</footer>
+<script src="/js/login.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> map </title>
+
+    <link rel="stylesheet" href="./css/set.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/index_category.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/map.css">
+    <script src="./js/index_banner.js"></script>
+    <script src="./js/index_category.js"></script>
+
+</head>
+
+
+<body>
+<header>
+    <div class="logo">
+        <div id="logo" onclick="location.href='./'"></div>
+        <img src="./img/Logo.png" style="height: 200%;">
+    </div>
+
+    <div class="trbox">
+        <a class="text" id="open-modal"> Login </a>
+        <div id="modal">
+            <form action="/member/login" method="post" class="modal-content">
+
+                <div class="logintext">Login</div>
+
+                <span id="close-modal">X</span>
+
+                <div class="login-box">
+                    <span class="text">ID</span>
+                    <input class="input" type="text" name="memberEmail">
+                </div>
+                <div class="login-box">
+                    <span class="text">Password</span>
+                    <input class="input" type="password" name="memberPassword">
+                </div>
+
+                <input class="login-click" type="submit" value="로그인">
+
+                <div class="help">
+                    <a href="./member/join">회원가입</a>
+                    <a href="#">아이디 찾기</a>
+                    <a href="#">비밀번호 찾기</a>
+                </div>
+
+                <div class="logintext">SNS 로그인</div>
+
+                <div class="sns-login">
+                    <img class="icon" onclick="location.href='#'" src="./img/sns-icon/login-naver.png">
+                    <img class="icon" onclick="location.href='#'" src="./img/sns-icon/login-google.png">
+                    <img class="icon" onclick="location.href='#'" src="./img/sns-icon/login-kakaotalk.png">
+                    <img class="icon" onclick="location.href='#'" src="./img/sns-icon/login-facebook.png">
+                </div>
+
+            </form>
+        </div>
+        <a href="./member/join" class="text"> Join </a>
+        <a href="#" class="text"> MyPage </a>
+        <a href="#" class="text"> Order </a>
+        <a href="./secure/cart" class="text"> Cart </a>
+    </div>
+
+    <div class="searchbox">
+        <input class="search" type="text" name="search">
+        <img id="img" onclick="location.href='#'" src="./img/lens.jpg" style="width: 25px; height: 25px;">
+    </div>
+
+</header>
+
+<nav>
+    <ul class="menu">
+        <li> <a href="#" class="text"> Best </a>
+        </li>
+        <li> <a href="#" class="text"> Sale </a>
+        </li>
+        <li> <a href="#" class="text"> New </a>
+        </li>
+        <li> <a href="#" class="text"> Top </a>
+            <ul class="submenu">
+                <li> <a href="#"> 맨투맨 & 후드티 </a> </li>
+                <li> <a href="#"> 셔츠 & 남방 </a> </li>
+                <li> <a href="#"> 니트 </a> </li>
+                <li> <a href="./products"> 반팔티 </a> </li>
+                <li> <a href="#"> 긴팔티 </a> </li>
+            </ul>
+        </li>
+        <li> <a href="#" class="text"> Pants </a>
+            <ul class="submenu">
+                <li> <a href="#"> 슬랙스 </a> </li>
+                <li> <a href="#"> 청바지 </a> </li>
+                <li> <a href="#"> 반바지 </a> </li>
+                <li> <a href="#"> 밴딩팬츠 </a> </li>
+            </ul>
+        </li>
+        <li> <a href="#" class="text"> Outer </a>
+            <ul class="submenu">
+                <li> <a href="#"> 패딩 </a> </li>
+                <li> <a href="#"> 코트 </a> </li>
+                <li> <a href="#"> 자켓 </a> </li>
+                <li> <a href="#"> 수트 & 블레이져 </a> </li>
+                <li> <a href="#"> 가디건 </a> </li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+<div class="directions">
+    <h1 class="text"> 찾아오시는 길 </h1>
+    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d939.1617815426486!2d126.87351384803037!3d37.65035362418433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9735ff6d0319%3A0xe52d4ad28860dbb1!2z7JuQ7Z2l7Jet!5e0!3m2!1sko!2skr!4v1688544024279!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+<footer>
+    <article class="address">
+        <ul class="menu listn">
+            <h3> CS CENTER </h3>
+            <li> 카카오톡/네이버톡톡 </li>
+            <li> MON-FRI : 10:00 ~ 17:00 </li>
+            <li> LUNCH: 13:00 ~ 14:00 </li>
+            <li> SAT, SUN, HOLIDAY OFF </li>
+            <li> 대표번호 1111-1111 (유선상담불가) </li>
+        </ul>
+        <ul class="menu listn">
+            <h3> DELIVERY </h3>
+            <li> 반품주소: </li>
+            <li> 경기도 고양시 덕양구 삼원로 111 물류센터 </li>
+            <li> 대한통운 택배 이용 </li>
+        </ul>
+        <ul class="menu listn">
+            <h3> BANK ACCOUNT </h3>
+            <li> 국민 1111-111-111111 </li>
+            <li> 신한 1111-111-111111 </li>
+            <li> 우리 1111-111-111111 </li>
+            <li> 기업 1111-111-111111 </li>
+            <li> 농협 1111-111-111111 </li>
+        </ul>
+        <ul class="menu listn">
+            <h3> MENU </h3>
+            <li> 홈 </li>
+            <li> 이용약관 </li>
+            <li> 개인정보처리방침 </li>
+            <li> 쇼핑몰 이용안내 </li>
+            <li> <a class="nodeco" href="./map"> 찾아오시는 길 </a> </li>
+        </ul>
+    </article>
+
+    <ul class="copyright listn">
+        <li> ㈜ SIMPLEBUTSLAY | 대표 : 김정우 | 사업자 등록 번호 : 111-11-11111 | 통신판매업 신고: 제2023-경기고양-111호 | 개인정보 보호 책임자 : 김정우
+            [사업자정보확인]
+        </li>
+        <li> E-mail : rara980928@google.com | 주소 : 경기도 고양시 덕양구 원흥동 111-1 1층 SIMPLEBUTSLAY 도로명 : 경기도 고양시 삼원로 111 1층
+            SIMPLEBUTSLAY </li>
+        <li> ⓒ 2023. SIMPLEBUTSLAY All rights reserved. </li>
+    </ul>
+</footer>
+<script src="/js/login.js"></script>
+</body>
+
+</html>

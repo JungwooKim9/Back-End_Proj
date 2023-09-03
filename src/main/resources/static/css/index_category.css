@@ -1,0 +1,72 @@
+main section .ctgryprdtbox {
+    position: relative;
+    top: 50px;
+    width: 1720px;
+    height: 430px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+main section .ctgryprdtbox .bigbox {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+main section .ctgryprdtbox .bigbox .ctgrysmlbox {
+    list-style: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+main section .ctgryprdtbox .bigbox .ctgrysmlbox .smlbox {
+    position: relative;
+    width: 285px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+main section .ctgryprdtbox .bigbox .ctgrysmlbox .smlbox .imgbox {
+    width: 285px;
+    height: 368px;
+}
+
+main section .ctgryprdtbox .bigbox .ctgrysmlbox .smlbox .imgbox img {
+    position: absolute;
+    width: 100%;
+    height: 86%;
+}
+
+main section .ctgryprdtbox .bigbox .ctgrysmlbox .smlbox .text {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 275px;
+    height: 50px;
+}
+
+main section .ctgryprdtbox .bigbox .ctgrysmlbox .smlbox .text .name {
+    font-weight: 700;
+}
+
+main section .ctgryprdtbox .bigbox .ctgrysmlbox .smlbox .text .price {
+    margin-top: 5px;
+}
+
+#tbtn.colorchange {
+    background-color: rgb(230, 230, 230);
+    color: black;
+}
+#pbtn.colorchange {
+    background-color: rgb(230, 230, 230);
+    color: black;
+}
+#obtn.colorchange {
+    background-color: rgb(230, 230, 230);
+    color: black;
+}

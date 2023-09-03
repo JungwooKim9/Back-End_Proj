@@ -1,0 +1,72 @@
+header {
+    width: 1350px;
+    height: 170px;
+    margin: auto;
+    position: relative;
+}
+
+header .logo {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 550px;
+    top: 65px;
+}
+
+header #logo {
+    position: absolute;
+    width: 270px;
+    height: 100px;
+}
+
+header #logo:hover {
+    cursor: pointer;
+}
+
+header .trbox {
+    width: 350px;
+    height: 35px;
+    position: absolute;
+    right: 0px;
+    top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .trbox .text {
+    color: black;
+    width: 66px;
+    height: 30px;
+    margin: 2px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+header .searchbox {
+    border-bottom: 1px solid black;
+    width: 150px;
+    height: 35px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+header .searchbox .search {
+    outline: none ;
+    border-style: none;
+    width: 120px;
+}
+
+header .searchbox #img:hover {
+    cursor: pointer;
+}
+

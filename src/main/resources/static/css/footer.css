@@ -1,0 +1,45 @@
+footer {
+    margin-top: 150px;
+    height: 262px;
+    color: #666666;
+}
+
+footer .address {
+    background-color: rgb(70, 70, 70);
+    height: 162px;
+    display: flex;
+    justify-content: center;
+}
+
+footer .address .listn {
+    list-style-type: none;
+}
+
+footer .menu {
+    float: left;
+    margin-left: 50px;
+    margin-right: 50px;
+    position: relative;
+    top: 10px;
+    color: white;
+}
+
+footer .menu li {
+    width: 270px;
+    margin-top: 5px;
+    font-size: small;
+}
+
+.nodeco {
+    text-decoration: none;
+    color: white;
+}
+
+footer .copyright {
+    height: 100px;
+    text-align: center;
+    padding: 30px;
+    font-size: 11px;
+    color: #888888;
+    list-style: none;
+}

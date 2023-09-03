@@ -1,0 +1,173 @@
+main .container {
+    position: relative;
+    width: 1500px;
+    height: 865px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+main .banner {
+    position: absolute;
+    width: 100%;
+}
+
+main .banner .inner {
+    list-style: none;
+    width: 100%;
+    margin: 0px;
+}
+
+.banner.animated {
+    -webkit-transition: left .3s ease-in;
+    transition: left .3s ease-in;
+}
+
+.container #rbtn,
+.container #lbtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-120%);
+    z-index: 999999;
+    display: inline-block;
+    height: 2.5em;
+    width: 2.5em;
+    border-style: none;
+    border-radius: 50%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+    background-color:rgba(255, 255, 255, 0.3);
+    font-size: xx-large;
+}
+
+#lbtn {
+    left: 10px;
+}
+
+#rbtn {
+    right: 10px;
+}
+
+#lbtn:hover, #rbtn:hover {
+    cursor: pointer;
+}
+
+main section {
+    height: 650px;
+    position: relative;
+}
+
+main section .htext {
+    text-align: center;
+    margin-top: 150px;
+}
+
+main section .linebox {
+    display: flex;
+    justify-content: center;
+}
+
+main section .line {
+    border-bottom: 1px solid black;
+    height: 30px;
+    width: 100px;
+
+}
+
+main section .prdtbox {
+    position: relative;
+    top: 50px;
+    width: 1720px;
+    height: 430px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+main section .prdtbox .smlbox {
+    position: relative;
+    width: 285px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+main section .prdtbox .smlbox .imgbox {
+    width: 285px;
+    height: 368px;
+}
+
+main section .prdtbox .smlbox .imgbox img {
+    position: absolute;
+    width: 100%;
+    height: 86%;
+}
+
+main section .prdtbox .smlbox .text {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 275px;
+    height: 50px;
+}
+
+main section .prdtbox .smlbox .text .name {
+    font-weight: 700;
+}
+
+main section .prdtbox .smlbox .text .price {
+    margin-top: 5px;
+}
+
+.imgbox:hover, .name:hover {
+    cursor: pointer;
+}
+
+main section .ctgrybtnbox {
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+main section .ctgrybtnbox .smlbtnbox {
+    border: 1px solid rgb(70, 70, 70);
+    background-color: rgb(70, 70, 70);
+    color: white;
+    width: 100px;
+
+    text-align: center;
+    font-size: medium;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+}
+
+main section .ctgrybtnbox .smlbtnbox:hover {
+    cursor: pointer;
+    border: 5px solid rgb(142, 142, 142);
+    transition: 0.2s;
+}
+
+main section .ctgrybtnbox .smlbtnbox.clicked {
+    background-color: white;
+}
+
+/* added */
+main section {
+    height: 100% !important;
+}
+
+main section .prdtbox {
+    /* flex 삭제 */
+    display: inherit !important;
+    width: 1350px;
+    height: unset !important;
+}
+
+main section .smlbox {
+    /* flex 삭제 */
+    display: inline-block;
+}
+/* // added */

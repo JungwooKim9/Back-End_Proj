@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> index </title>
+
+    <link rel="stylesheet" href="./css/set.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/index_category.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <script src="./js/index_banner.js"></script>
+    <script src="./js/index_category.js"></script>
+
+</head>
+
+
+<body>
+<header>
+    <div class="logo">
+        <div id="logo" onclick="location.href='./'"></div>
+        <img src="./img/Logo.png" style="height: 200%;">
+    </div>
+
+    <div class="trbox">
+        <a class="text" id="open-modal"> Login </a>
+        <div id="modal">
+            <form action="/member/login" method="post" class="modal-content">
+
+                <div class="logintext">Login</div>
+
+                <span id="close-modal">X</span>
+
+                <div class="login-box">
+                    <span class="text">ID</span>
+                    <input class="input" type="text" name="memberEmail">
+                </div>
+                <div class="login-box">
+                    <span class="text">Password</span>
+                    <input class="input" type="password" name="memberPassword">
+                </div>
+
+                <input class="login-click" type="submit" value="로그인">
+
+                <div class="help">
+                    <a href="./member/join">회원가입</a>
+                    <a href="#">아이디 찾기</a>
+                    <a href="#">비밀번호 찾기</a>
+                </div>
+
+                <div class="logintext">SNS 로그인</div>
+
+                <div class="sns-login">
+                    <img class="icon" onclick="location.href='#'" src="./img/sns-icon/login-naver.png">
+                    <img class="icon" onclick="location.href='#'" src="./img/sns-icon/login-google.png">
+                    <img class="icon" onclick="location.href='#'" src="./img/sns-icon/login-kakaotalk.png">
+                    <img class="icon" onclick="location.href='#'" src="./img/sns-icon/login-facebook.png">
+                </div>
+
+            </form>
+        </div>
+        <a href="./member/join" class="text"> Join </a>
+        <a href="#" class="text"> MyPage </a>
+        <a href="#" class="text"> Order </a>
+        <a href="./secure/cart" class="text"> Cart </a>
+    </div>
+
+    <div class="searchbox">
+        <input class="search" type="text" name="search">
+        <img id="img" onclick="location.href='#'" src="./img/lens.jpg" style="width: 25px; height: 25px;">
+    </div>
+
+</header>
+
+<nav>
+    <ul class="menu">
+        <li> <a href="#" class="text"> Best </a>
+        </li>
+        <li> <a href="#" class="text"> Sale </a>
+        </li>
+        <li> <a href="#" class="text"> New </a>
+        </li>
+        <li> <a href="#" class="text"> Top </a>
+            <ul class="submenu">
+                <li> <a href="#"> 맨투맨 & 후드티 </a> </li>
+                <li> <a href="#"> 셔츠 & 남방 </a> </li>
+                <li> <a href="#"> 니트 </a> </li>
+                <li> <a href="./products"> 반팔티 </a> </li>
+                <li> <a href="#"> 긴팔티 </a> </li>
+            </ul>
+        </li>
+        <li> <a href="#" class="text"> Pants </a>
+            <ul class="submenu">
+                <li> <a href="#"> 슬랙스 </a> </li>
+                <li> <a href="#"> 청바지 </a> </li>
+                <li> <a href="#"> 반바지 </a> </li>
+                <li> <a href="#"> 밴딩팬츠 </a> </li>
+            </ul>
+        </li>
+        <li> <a href="#" class="text"> Outer </a>
+            <ul class="submenu">
+                <li> <a href="#"> 패딩 </a> </li>
+                <li> <a href="#"> 코트 </a> </li>
+                <li> <a href="#"> 자켓 </a> </li>
+                <li> <a href="#"> 수트 & 블레이져 </a> </li>
+                <li> <a href="#"> 가디건 </a> </li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+<main>
+    <div class="container">
+        <ul class="banner" id="slider">
+            <li class="inner">
+                <img src="./img/Banner1.png" style="width: 100%;">
+            </li>
+            <li class="inner">
+                <img src="./img/Banner2.png" style="width: 100%;">
+            </li>
+            <li class="inner">
+                <img src="./img/Banner3.png" style="width: 100%;">
+            </li>
+        </ul>
+        <button id="lbtn">&#8249;</button>
+        <button id="rbtn">&#8250;</button>
+
+    </div>
+
+    <section>
+        <h2 class="htext"> TO DAY BEST </h2>
+        <div class="linebox">
+            <div class="line"></div>
+        </div>
+        <div class="prdtbox">
+            <div class="smlbox">
+                <div class="imgbox" onclick="location.href='./detail'"> <img src="./p_img/t-shirt_img/w_ns.png">
+                </div>
+                <div class="text">
+                    <span class="name" onclick="location.href='./detail'"> 라운드 반팔 니트 </span>
+                    <div class="price"> 33,000원 </div>
+                </div>
+            </div>
+
+            <div class="smlbox">
+                <div class="imgbox"> <img src="./p_img/denimpants_img/db_d.png"> </div>
+                <div class="text">
+                    <span class="name"> 데님 팬츠 </span>
+                    <div class="price"> 37,000원 </div>
+                </div>
+            </div>
+
+            <div class="smlbox">
+                <div class="imgbox"> <img src="./p_img/t-shirt_img/b_mst.png"> </div>
+                <div class="text">
+                    <span class="name"> 반팔 티셔츠 </span>
+                    <div class="price"> 18,000원 </div>
+                </div>
+            </div>
+
+            <div class="smlbox">
+                <div class="imgbox"> <img src="./p_img/knit_img/i_n.png"> </div>
+                <div class="text">
+                    <span class="name"> 라운드 니트 </span>
+                    <div class="price"> 39,000원 </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <h2 class="htext"> CATEGORY BEST </h2>
+        <div class="linebox">
+            <div class="line"></div>
+        </div>
+        <div class="ctgrybtnbox">
+            <span class="smlbtnbox" id="tbtn"> TOP </span>
+            <span class="smlbtnbox" id="pbtn"> PANTS </span>
+            <span class="smlbtnbox" id="obtn"> OUTER </span>
+        </div>
+
+        <div class="ctgryprdtbox">
+            <ul class="bigbox" id="ctgrysldr">
+
+                <li class="ctgrysmlbox">
+                    <div class="smlbox">
+                        <div class="imgbox"> <img src="./p_img/t-shirt_img/w_ns.png"> </div>
+                        <div class="text">
+                            <span class="name"> 라운드 반팔 니트 </span>
+                            <div class="price"> 33,000원 </div>
+                        </div>
+                    </div>
+
+                    <div class="smlbox">
+                        <div class="imgbox"> <img src="./p_img/t-shirt_img/b_mst.png"> </div>
+                        <div class="text">
+                            <span class="name"> 반팔 티셔츠 </span>
+                            <div class="price"> 18,000원 </div>
+                        </div>
+                    </div>
+
+                    <div class="smlbox">
+                        <div class="imgbox"> <img src="./p_img/t-shirt_img/b_opts.png"> </div>
+                        <div class="text">
+                            <span class="name"> 프린팅 반팔 티셔츠 </span>
+                            <div class="price"> 21,000원 </div>
+                        </div>
+                    </div>
+
+                    <div class="smlbox">
+                        <div class="imgbox"> <img src="./p_img/t-shirt_img/wb_osts.png"> </div>
+                        <div class="text">
+                            <span class="name"> 스트라이프 반팔 티셔츠 </span>
+                            <div class="price"> 22,000원 </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="ctgrysmlbox">
+                    <div class="smlbox">
+                        <div class="imgbox"> <img src="./p_img/denimpants_img/db_d.png"> </div>
+                        <div class="text">
+                            <span class="name"> 데님 팬츠 </span>
+                            <div class="price"> 37,000원 </div>
+                        </div>
+                    </div>
+
+                    <div class="smlbox">
+                        <div class="imgbox"> <img src="./p_img/slacks_img/w_ssl.png"> </div>
+                        <div class="text">
+                            <span class="name"> 슬림핏 슬랙스 </span>
+                            <div class="price"> 39000원 </div>
+                        </div>
+                    </div>
+
+                    <div class="smlbox">
+                        <div class="imgbox"> <img src="./p_img/slacks_img/b_ssl.png"> </div>
+                        <div class="text">
+                            <span class="name"> 레귤러핏 슬랙스 </span>
+                            <div class="price"> 37000원 </div>
+                        </div>
+                    </div>
+
+                    <div class="smlbox">
+                        <div class="imgbox"> <img src="./p_img/bandingpants_img/n_btp.png"> </div>
+                        <div class="text">
+                            <span class="name"> 트레이닝 밴딩 팬츠 </span>
+                            <div class="price"> 330000원 </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="ctgrysmlbox">
+                    <div class="smlbox">
+                        <div class="imgbox"> <img src="./p_img/jaket_img/b_ordjk.png"> </div>
+                        <div class="text">
+                            <span class="name"> 오버핏 래더 자켓 </span>
+                            <div class="price"> 43000원 </div>
+                        </div>
+                    </div>
+
+                    <div class="smlbox">
+                        <div class="imgbox"> <img src="./p_img/jaket_img/m_djk.png"> </div>
+                        <div class="text">
+                            <span class="name"> 청자켓 </span>
+                            <div class="price"> 45000원 </div>
+                        </div>
+                    </div>
+
+                    <div class="smlbox">
+                        <div class="imgbox"> <img src="./p_img/cardigan_img/b_vcdg.png"> </div>
+                        <div class="text">
+                            <span class="name"> 브이넥 가디건 </span>
+                            <div class="price"> 37000원 </div>
+                        </div>
+                    </div>
+
+                    <div class="smlbox">
+                        <div class="imgbox"> <img src="./p_img/jaket_img/w_vstjk.png"> </div>
+                        <div class="text">
+                            <span class="name"> 바시티 자켓 </span>
+                            <div class="price"> 42000원 </div>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+
+
+    </section>
+</main>
+
+<footer>
+    <article class="address">
+        <ul class="menu listn">
+            <h3> CS CENTER </h3>
+            <li> 카카오톡/네이버톡톡 </li>
+            <li> MON-FRI : 10:00 ~ 17:00 </li>
+            <li> LUNCH: 13:00 ~ 14:00 </li>
+            <li> SAT, SUN, HOLIDAY OFF </li>
+            <li> 대표번호 1111-1111 (유선상담불가) </li>
+        </ul>
+        <ul class="menu listn">
+            <h3> DELIVERY </h3>
+            <li> 반품주소: </li>
+            <li> 경기도 고양시 덕양구 삼원로 111 물류센터 </li>
+            <li> 대한통운 택배 이용 </li>
+        </ul>
+        <ul class="menu listn">
+            <h3> BANK ACCOUNT </h3>
+            <li> 국민 1111-111-111111 </li>
+            <li> 신한 1111-111-111111 </li>
+            <li> 우리 1111-111-111111 </li>
+            <li> 기업 1111-111-111111 </li>
+            <li> 농협 1111-111-111111 </li>
+        </ul>
+        <ul class="menu listn">
+            <h3> MENU </h3>
+            <li> 홈 </li>
+            <li> 이용약관 </li>
+            <li> 개인정보처리방침 </li>
+            <li> 쇼핑몰 이용안내 </li>
+            <li> <a class="nodeco" href="./map"> 찾아오시는 길 </a> </li>
+        </ul>
+    </article>
+
+    <ul class="copyright listn">
+        <li> ㈜ SIMPLEBUTSLAY | 대표 : 김정우 | 사업자 등록 번호 : 111-11-11111 | 통신판매업 신고: 제2023-경기고양-111호 | 개인정보 보호 책임자 : 김정우
+            [사업자정보확인]
+        </li>
+        <li> E-mail : rara980928@google.com | 주소 : 경기도 고양시 덕양구 원흥동 111-1 1층 SIMPLEBUTSLAY 도로명 : 경기도 고양시 삼원로 111 1층
+            SIMPLEBUTSLAY </li>
+        <li> ⓒ 2023. SIMPLEBUTSLAY All rights reserved. </li>
+    </ul>
+</footer>
+<script src="/js/login.js"></script>
+</body>
+
+</html>
