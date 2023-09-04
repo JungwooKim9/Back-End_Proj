@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> index </title>
 
-    <link rel="stylesheet" href="./css/set.css">
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/nav.css">
-    <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/index_category.css">
-    <link rel="stylesheet" href="./css/login.css">
-    <script src="./js/index_banner.js"></script>
-    <script src="./js/index_category.js"></script>
+    <link rel="stylesheet" th:href="@{/css/set.css}">
+    <link rel="stylesheet" th:href="@{/css/header.css}">
+    <link rel="stylesheet" th:href="@{/css/nav.css}">
+    <link rel="stylesheet" th:href="@{/css/footer.css}">
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+    <link rel="stylesheet" th:href="@{/css/index_category.css}">
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+    <script th:src="@{/js/index_banner.js}"></script>
+    <script th:src="@{/js/index_category.js}"></script>
 
 </head>
 
@@ -22,12 +22,25 @@
 <body>
 <header>
     <div class="logo">
-        <div id="logo" onclick="location.href='./'"></div>
-        <img src="./img/Logo.png" style="height: 200%;">
+        <div id="logo" onclick="location.href='/'"></div>
+        <img th:src="@{/img/Logo.png}" style="height: 200%;">
     </div>
 
     <div class="trbox">
-        <a class="text" id="open-modal"> Login </a>
+
+        <div th:if="${loggedIn}">
+            <!-- 사용자가 로그인한 경우 -->
+            <!-- 왜 반대로 되지 -->
+            <a class="text" id="open-modal"> Login </a>
+
+        </div>
+        <div th:unless="${loggedIn}">
+            <!-- 사용자가 로그인하지 않은 경우 -->
+            <!-- 왜 반대로 되지 -->
+            <a th:href="@{/logout}" class="text"> Logout </a>
+
+        </div>
+
         <div id="modal">
             <form action="/member/login" method="post" class="modal-content">
 
@@ -71,7 +84,7 @@
 
     <div class="searchbox">
         <input class="search" type="text" name="search">
-        <img id="img" onclick="location.href='#'" src="./img/lens.jpg" style="width: 25px; height: 25px;">
+        <img id="img" onclick="location.href='#'" th:src="@{/img/lens.jpg}" style="width: 25px; height: 25px;">
     </div>
 
 </header>
@@ -117,13 +130,13 @@
     <div class="container">
         <ul class="banner" id="slider">
             <li class="inner">
-                <img src="./img/Banner1.png" style="width: 100%;">
+                <img th:src="@{/img/Banner1.png}" style="width: 100%;">
             </li>
             <li class="inner">
-                <img src="./img/Banner2.png" style="width: 100%;">
+                <img th:src="@{/img/Banner2.png}" style="width: 100%;">
             </li>
             <li class="inner">
-                <img src="./img/Banner3.png" style="width: 100%;">
+                <img th:src="@{/img/Banner3.png}" style="width: 100%;">
             </li>
         </ul>
         <button id="lbtn">&#8249;</button>

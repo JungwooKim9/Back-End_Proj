@@ -25,7 +25,7 @@ public class MemberController {
         System.out.println("memberDTO = " + memberDTO);
 
         memberService.join(memberDTO);
-        return "/index";
+        return "index";
     }
 
     @PostMapping("/member/login")
@@ -35,11 +35,12 @@ public class MemberController {
             // login 성공
             session.setAttribute("loginEmail", loginResult.getMemberEmail());
 
-            return "index";
+//            return "redirect:/";
+                return "index";
         } else {
             // login 실패
 
-            return "index";
+            return null;
         }
     }
 

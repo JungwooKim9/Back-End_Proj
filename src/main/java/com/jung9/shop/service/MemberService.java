@@ -1,5 +1,6 @@
 package com.jung9.shop.service;
 
+import com.jung9.shop.constant.MemberRole;
 import com.jung9.shop.dto.MemberDTO;
 import com.jung9.shop.entity.MemberEntity;
 import com.jung9.shop.repository.MemberRepository;
@@ -10,6 +11,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.*;
 
 @Service
@@ -45,7 +47,11 @@ public class MemberService implements UserDetailsService {
         MemberEntity memberEntity = MemberEntity.toMemberEntity(memberDTO);
         // 사용자 권한 설정 (기본: 일반 사용자)
         Set<String> roles = new HashSet<>();
-        roles.add("ROLE_USER");
+        roles.add("ROLE_USER"); // 기본으로 ROLE_USER 권한을 부여
+//        MemberRole memberRole = new MemberRole();
+
+        memberEntity.setMemberJoinDate(LocalDate.now());
+//        memberEntity.setMemberRole(memberRole);
         memberRepository.save(memberEntity);
         // repository의 save 메소드 호출 (조건. entity 객체를 넘겨줘야함)
     }

@@ -1,10 +1,12 @@
 package com.jung9.shop.entity;
 
+import com.jung9.shop.constant.MemberRole;
 import com.jung9.shop.dto.MemberDTO;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Collection;
 import java.util.List;
 import java.util.Set;
@@ -33,6 +35,15 @@ public class MemberEntity {
     @Column
     private String memberPhoneNum;
 
+    @Column
+    private String memberAddress;
+
+    @Column
+    private LocalDate memberJoinDate;
+
+    @Enumerated(EnumType.STRING)
+    private MemberRole memberRole;
+
     @ElementCollection(fetch = FetchType.EAGER)
     private Set<String> roles;
 
@@ -43,6 +54,9 @@ public class MemberEntity {
         memberEntity.setMemberName(memberDTO.getMemberName());
         memberEntity.setMemberBirthDate(memberDTO.getMemberBirthDate());
         memberEntity.setMemberPhoneNum(memberDTO.getMemberPhoneNum());
+        memberEntity.setMemberAddress(memberDTO.getMemberAddress());
+        memberEntity.setMemberJoinDate(memberDTO.getMemberJoinDate());
+        memberEntity.setMemberRole(memberDTO.getMemberRole());
         return memberEntity;
     }
 
