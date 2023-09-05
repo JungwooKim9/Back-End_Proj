@@ -9,6 +9,7 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -18,6 +19,7 @@ import java.util.*;
 @RequiredArgsConstructor
 public class MemberService implements UserDetailsService {
     private final MemberRepository memberRepository;
+    private final PasswordEncoder passwordEncoder;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
@@ -45,6 +47,9 @@ public class MemberService implements UserDetailsService {
 
         // 1. dto -> entity 변환
         // 2. repository의 save 메소드 호출
+
+         memberDTO.setMemberPassword(passwordEncoder.encode(memberDTO.getMemberPassword()));
+
         MemberEntity memberEntity = MemberEntity.toMemberEntity(memberDTO);
 
         memberEntity.setMemberJoinDate(LocalDate.now());

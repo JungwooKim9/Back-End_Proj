@@ -44,8 +44,6 @@ public class MemberEntity {
     @Enumerated(EnumType.STRING)
     private MemberRole memberRole;
 
-    @ElementCollection(fetch = FetchType.EAGER)
-    private Set<String> roles;
 
     public static MemberEntity toMemberEntity(MemberDTO memberDTO) {
         MemberEntity memberEntity = new MemberEntity();
@@ -56,11 +54,8 @@ public class MemberEntity {
         memberEntity.setMemberPhoneNum(memberDTO.getMemberPhoneNum());
         memberEntity.setMemberAddress(memberDTO.getMemberAddress());
         memberEntity.setMemberJoinDate(memberDTO.getMemberJoinDate());
-        memberEntity.setMemberRole(memberDTO.getMemberRole());
+        memberEntity.setMemberRole(MemberRole.ROLE_USER);
         return memberEntity;
     }
 
-    public void setRoles(Set<String> roles) {
-        this.roles = roles;
-    }
 }

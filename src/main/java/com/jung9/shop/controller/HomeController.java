@@ -17,6 +17,7 @@ public class HomeController {
     public String securePage(Model model) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 
+        /*
         if (authentication.isAuthenticated()) {
             // 사용자는 로그인되었습니다.
             System.out.println("loggedIn: " + authentication.getName());
@@ -26,12 +27,18 @@ public class HomeController {
             model.addAttribute("loggedIn", false);
             System.out.println("Not loggedIn: " + authentication.getName());
         }
-
+        */
         return "index";
     }
 
     @GetMapping("/map")
     public String map() {
         return "map";
+    }
+
+    @GetMapping("/test")
+    public String Test() {
+
+        return "test";
     }
 }
