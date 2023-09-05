@@ -28,21 +28,12 @@ public class MemberController {
         return "index";
     }
 
-    @PostMapping("/member/login")
-    public String login(@ModelAttribute MemberDTO memberDTO, HttpSession session) {
-        MemberDTO loginResult = memberService.login(memberDTO);
-        if (loginResult != null) {
-            // login 성공
-            session.setAttribute("loginEmail", loginResult.getMemberEmail());
-
-//            return "redirect:/";
-                return "index";
-        } else {
-            // login 실패
-
-            return null;
-        }
+    @GetMapping("/member/login")
+    public String indexPage(@ModelAttribute MemberDTO memberDTO, HttpSession session) {
+        return "index";
+//       ?? return "/member/memberLoginForm";
     }
+
 
     @PostMapping("/member/email-check")
     public @ResponseBody String emailCheck(@RequestParam("memberEmail") String memberEmail) {

@@ -29,6 +29,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //                .and()
                 .formLogin() // 로그인 설정 추가
                 .loginPage("/") // 로그인 페이지 지정
+                .loginProcessingUrl("/member/login")
                 .defaultSuccessUrl("/", true) // 로그인 성공 후 이동할 경로 설정
                 .permitAll() // 로그인 페이지에 접근 권한 허용
                 .and()

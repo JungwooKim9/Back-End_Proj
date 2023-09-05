@@ -14,6 +14,14 @@ public class Product {
 
     private int prdtPrice;
 
+    private int stock;
+
+    private String productDetails;
+
+    private int orderCount;
+
+    private String prdtType;
+
     public String getImgPath() {
         return imgPath;
     }

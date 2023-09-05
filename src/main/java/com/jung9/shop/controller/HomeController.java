@@ -19,10 +19,12 @@ public class HomeController {
 
         if (authentication.isAuthenticated()) {
             // 사용자는 로그인되었습니다.
+            System.out.println("loggedIn: " + authentication.getName());
             model.addAttribute("loggedIn", true);
         } else {
             // 사용자는 로그인되지 않았습니다.
             model.addAttribute("loggedIn", false);
+            System.out.println("Not loggedIn: " + authentication.getName());
         }
 
         return "index";

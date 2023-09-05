@@ -31,13 +31,13 @@
         <div th:if="${loggedIn}">
             <!-- 사용자가 로그인한 경우 -->
             <!-- 왜 반대로 되지 -->
-            <a class="text" id="open-modal"> Login </a>
+            <a th:href="@{/logout}" class="text"> Logout </a>
 
         </div>
         <div th:unless="${loggedIn}">
             <!-- 사용자가 로그인하지 않은 경우 -->
             <!-- 왜 반대로 되지 -->
-            <a th:href="@{/logout}" class="text"> Logout </a>
+            <a class="text" id="open-modal"> Login </a>
 
         </div>
 

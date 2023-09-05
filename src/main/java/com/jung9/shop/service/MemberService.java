@@ -40,18 +40,14 @@ public class MemberService implements UserDetailsService {
         // 이메일로 이미 가입된 회원이 있는지 확인
         if (memberRepository.findByMemberEmail(memberDTO.getMemberEmail()).isPresent()) {
             throw new RuntimeException("이미 가입된 회원입니다.");
+//            throw new IllegalStateException("이미 가입된 회원입니다.");
         }
 
         // 1. dto -> entity 변환
         // 2. repository의 save 메소드 호출
         MemberEntity memberEntity = MemberEntity.toMemberEntity(memberDTO);
-        // 사용자 권한 설정 (기본: 일반 사용자)
-        Set<String> roles = new HashSet<>();
-        roles.add("ROLE_USER"); // 기본으로 ROLE_USER 권한을 부여
-//        MemberRole memberRole = new MemberRole();
 
         memberEntity.setMemberJoinDate(LocalDate.now());
-//        memberEntity.setMemberRole(memberRole);
         memberRepository.save(memberEntity);
         // repository의 save 메소드 호출 (조건. entity 객체를 넘겨줘야함)
     }
