@@ -39,5 +39,4 @@ public class PrincipalDetailService implements UserDetailsService {
         return userDetails;
     }
 
-
 }
