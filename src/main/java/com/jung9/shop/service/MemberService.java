@@ -5,6 +5,7 @@ import com.jung9.shop.dto.MemberDTO;
 import com.jung9.shop.entity.MemberEntity;
 import com.jung9.shop.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -31,7 +32,8 @@ public class MemberService implements UserDetailsService {
             return new User(
                     memberEntity.getMemberEmail(),
                     memberEntity.getMemberPassword(),
-                    Collections.emptyList() // 사용자 권한 설정 (빈 리스트인 경우 권한 없음)
+                    // 사용자가 가진 권한을 DB에서 조회하여 반환한다
+                    Collections.singleton(new SimpleGrantedAuthority(memberEntity.getMemberRole().toString()))
             );
         } else {
             throw new UsernameNotFoundException("User not found with username: " + username);
